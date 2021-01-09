@@ -200,12 +200,12 @@ section {
       font-size: 0.3rem;
       flex-direction: column;
       outline: 1px dashed blue; } }
-  @media (min-width: 300px) {
+  @media (min-width: 300px) and (max-width: 599px) {
     section {
       font-size: 0.3rem;
       flex-direction: column;
       outline: 1px dashed red; } }
-  @media (min-width: 600px) {
+  @media (min-width: 600px) and (max-width: 799px) {
     section {
       outline: 1px solid green;
       flex-direction: row; } }
