@@ -1,0 +1,21 @@
+//Navigation menu banner
+header {
+  width: 100%;
+  color: white;
+  background: $lite-blue;
+  nav {
+    display: flex;
+    flex-direction: row;
+    // margin: auto 0;
+    padding: 1rem;
+    h1 {
+      width: calc(70% - 1em);
+    }
+    ul {
+      width: calc(30%);
+      text-align: right;
+      outline: 1px solid red;
+      list-style: none;
+    }
+  }
+}

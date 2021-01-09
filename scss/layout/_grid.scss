@@ -1,0 +1,23 @@
+// get section to rows
+article {
+  h2 {
+    display: flex;
+
+    // text-align: center;
+    justify-content: center;
+    // align-items: flex-end;
+  }
+  ul {
+    // outline: 1px solid #75c183;
+    list-style: none;
+    li {
+      //   margin: 1em 5%;
+      outline: 1px solid pink;
+    }
+    //get the date to the right
+    p:nth-last-of-type(1) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

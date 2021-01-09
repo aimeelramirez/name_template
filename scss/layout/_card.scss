@@ -1,0 +1,35 @@
+article {
+  h2 {
+    display: flex;
+    font-size: 3rem;
+
+    // text-align: center;
+    justify-content: center;
+    // align-items: flex-end;
+  }
+  ul {
+    // outline: 1px solid #75c183;
+    list-style: none;
+    li {
+      //   margin: 1em 5%;
+      outline: 1px solid pink;
+    }
+    //get the date to the right
+    p:nth-last-of-type(1) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+@function makelongshadow($color) {
+  $val: 0px 0px $color;
+  @for $i from 1 through 10 {
+    $val: #{$val}, #{$i}px #{$i}px #{$color};
+  }
+  @return $val;
+}
+
+main > article > ul > li {
+  box-shadow: makelongshadow($pink);
+  outline: 1px solid black;
+}
