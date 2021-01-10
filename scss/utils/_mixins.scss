@@ -1,4 +1,5 @@
 $size: (
+  "none": tiny-width,
   "small": small-width,
   "medium": medium-width,
   "large": large-width,
@@ -25,4 +26,19 @@ $size: (
       @content;
     }
   }
+}
+@function makelongshadow($color) {
+  $val: 0;
+  @if ($color != null) {
+    $val: $shadow-cards;
+  }
+  @return $val;
+}
+
+@function makeborder($color) {
+  $val: 0;
+  @if ($color != null) {
+    $val: $grey-cards;
+  }
+  @return $val;
 }

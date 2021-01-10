@@ -1,18 +1,36 @@
-article {
-  h2 {
+//list on articles
+section {
+  // Title to button
+  .task-title {
     display: flex;
+    justify-content: space-between;
+    padding: 1rem;
     font-size: 3rem;
-
-    // text-align: center;
-    justify-content: center;
-    // align-items: flex-end;
   }
   ul {
     // outline: 1px solid #75c183;
     list-style: none;
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: $lite-grey;
+    border-radius: 1rem;
+    // opacity: 0.5;
     li {
-      //   margin: 1em 5%;
-      outline: 1px solid pink;
+      padding: 1rem;
+      article {
+        // cursor: grabbing;
+        cursor: pointer;
+        border-radius: 1rem;
+        background-color: $white;
+        max-width: 40rem;
+        box-shadow: makelongshadow($grey-cards);
+        h3 {
+          padding: 1rem;
+        }
+        p {
+          border-bottom: 1px solid makeborder($grey-cards);
+        }
+      }
     }
     //get the date to the right
     p:nth-last-of-type(1) {
@@ -20,16 +38,4 @@ article {
       justify-content: flex-end;
     }
   }
-}
-@function makelongshadow($color) {
-  $val: 0px 0px $color;
-  @for $i from 1 through 10 {
-    $val: #{$val}, #{$i}px #{$i}px #{$color};
-  }
-  @return $val;
-}
-
-main > article > ul > li {
-  box-shadow: makelongshadow($pink);
-  outline: 1px solid black;
 }
